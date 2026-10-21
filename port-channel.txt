@@ -1,0 +1,25 @@
+============= para L2==============
+
+configure t
+intrange gigabitEthernet 0/0 - 1
+channel-group 1 mode active
+ex
+
+interface port-channel 1
+switchport mode tr
+end
+
+============= para L3 ==============
+conf t
+int range gi 0/0 - 1
+no switchport
+channel-group 2 mode active
+ex
+
+interface port-channel 2
+no switchport
+ip add 192.168.100.1 255.255.255.0
+no shu
+end
+wr
+
