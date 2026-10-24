@@ -1,11 +1,12 @@
 ============= para L2==============
 
-configure t
-intrange gigabitEthernet 0/0 - 1
-channel-group 1 mode active
+conf t
+int range gigabitEthernet 0/0 - 1
+channel-group 1 mode desirable
 ex
 
 interface port-channel 1
+switchport tr encapsulation dot1q
 switchport mode tr
 end
 
